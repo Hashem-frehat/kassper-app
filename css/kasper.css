@@ -1,0 +1,620 @@
+:root {
+    --main-color: #19c8fa;
+    --tranperent: rgb(15 116 143 /70%);
+    --headering-padding: 100px;
+}
+
+.headering {
+    text-align: center;
+
+}
+
+.headering h2 {
+    font-size: 40px;
+    font-weight: normal;
+    position: relative;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+
+}
+
+.headering h2::before {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    bottom: -25px;
+}
+
+.headering h2::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -32px;
+    border: 2px solid black;
+}
+
+
+.headering p {
+    width: 400px;
+    max-width: 100%;
+    margin: 0 auto 75px;
+    color: #777;
+}
+
+/* commponents */
+
+/* end commponents */
+
+/* start global ruls  */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+
+
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+
+/* end global ruls  */
+/* start header */
+.header {
+    background-color: black;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header .container .logo img {
+    width: 80px;
+    height: 40px;
+}
+
+
+.header .container::after {
+    content: "";
+    position: absolute;
+    background-color: #a2a2a2;
+    width: calc(100% - 30px);
+    height: 1px;
+    bottom: 0px;
+    left: 15px;
+}
+
+.header .container nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.header nav .fa-ellipsis {
+    color: white;
+    font-size: 40px;
+}
+
+.header nav .fa-ellipsis:hover {
+    color: var(--main-color);
+
+}
+
+
+@media (min-width:767px) {
+    .header nav .fa-ellipsis {
+        display: none;
+    }
+}
+
+
+.header nav ul {
+    display: flex;
+}
+
+.header nav ul a {
+    display: block;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 40px 15px;
+    color: white;
+    transition: 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width:767px) {
+    .header nav ul {
+        display: none;
+    }
+}
+
+.header nav .fa-ellipsis:hover+ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.header nav .fa-ellipsis:hover+ul li a {
+    padding: 15px;
+}
+
+.header nav ul a:hover {
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+
+
+
+.header .container .search {
+
+    color: aliceblue;
+    width: 40px;
+    border-left: 1px solid white;
+    margin-left: 25px;
+    height: 25px;
+}
+
+.header .container .search .fa-search {
+    padding-left: 15px;
+    padding-top: 6px;
+
+}
+
+
+/* end header */
+/* START LANDING */
+
+.landing {
+    min-height: 90vh;
+    background-image: url(../image/wp6899583-black-mountain-wallpapers2.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100px;
+    position: relative;
+}
+
+.landing .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0/50%);
+    left: 0px;
+    top: 0;
+}
+
+.landing .text {
+    color: white;
+    top: 50%;
+    position: absolute;
+    left: 0%;
+    transform: translateY(-50%);
+    width: 50%;
+    padding: 50px;
+    background-color: var(--tranperent);
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (max-width :767px) {
+    .landing .text {
+        width: 100%;
+    }
+
+    .landing .change-background {
+        display: none;
+    }
+
+    .landing .text .intro {
+        max-width: 100%;
+    }
+}
+
+
+.landing .text .intro {
+    max-width: 500px;
+}
+
+.landing .text .intro h2 {
+    font-size: 23px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.landing .text .intro p {
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.landing .change-background {
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+
+}
+
+.landing .fa-angle-left {
+    left: 30px;
+}
+
+.landing .fa-angle-right {
+    right: 30px;
+}
+
+.landing .roll {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    bottom: 30px;
+
+}
+
+.landing .roll li {
+    height: 12px;
+    width: 12px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+.landing .roll li.active {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+
+/* end landing */
+/* start services */
+.services {
+
+    padding-top: var(--headering-padding);
+    padding-bottom: var(--headering-padding);
+}
+
+.services .services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+}
+
+@media (max-width:768px) {
+    .services .services-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+
+
+.services .services-content .srv {
+    display: flex;
+    margin-bottom: 30px;
+    margin-right: 20px;
+
+}
+
+.services .services-content .srv i {
+    margin-right: 40px;
+    margin-top: 8px;
+    font-size: 35px;
+}
+
+.services .services-content .srv h2 {
+    margin-bottom: 20px;
+    color: var(--main-color);
+}
+
+.services .services-content .srv p {
+    line-height: 2;
+    color: #777;
+}
+
+/* end services */
+/* start design */
+.design {
+    padding-top: var(--headering-padding);
+    padding-bottom: var(--headering-padding);
+    background-image: url(../image/space-5629007_1280.jpg);
+    background-size: cover;
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+
+
+.design::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0 0 0/30%);
+    left: 0;
+    top: 0;
+}
+
+.design .image,
+.design .text {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+}
+
+.design .image {
+    text-align: center;
+    bottom: -150px;
+
+}
+
+
+.design .text {
+    color: white;
+    padding: 50px;
+    background-color: var(--tranperent);
+}
+
+.design .text h2 {
+    font-weight: normal;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+}
+
+.design .text ul li {
+    padding: 15px 0;
+}
+
+.design .text ul li::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f108";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+/* end design  */
+/* start portfolio */
+.portfolio {
+    padding-top: var(--headering-padding);
+    padding-bottom: var(--headering-padding);
+}
+
+.portfolio .swap {
+    display: flex;
+    justify-content: center;
+
+}
+
+.portfolio .swap li {
+    padding: 10px;
+}
+
+.portfolio .swap li:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.portfolio .active {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.portfolio .img-cont {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.portfolio .img-cont .box {
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+
+@media (min-width:768px) {
+    .portfolio .img-cont .box {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width:1199px) {
+    .portfolio .img-cont .box {
+        flex-basis: 25%;
+    }
+}
+
+@media (max-width:768px) {
+    .portfolio .img-cont .box {
+        flex-basis: 100%;
+    }
+}
+
+.portfolio .img-cont .box .caption {
+    position: absolute;
+
+    padding: 20px;
+    background-color: white;
+    transition: 0.4s;
+    bottom: -100%;
+    width: 100%;
+
+}
+
+
+.portfolio .img-cont .box img {
+    transition: 0.3s;
+    width: 100%;
+}
+
+.portfolio .img-cont .box:hover .caption {
+    bottom: -7px;
+}
+
+.portfolio .img-cont .box:hover img {
+    transform: rotate(4deg) scale(1.1);
+}
+
+.portfolio .img-cont .box .caption h4 {
+    margin-bottom: 10px;
+}
+
+.portfolio .img-cont .box .caption p {
+    color: var(--main-color);
+
+}
+
+.portfolio .more {
+    text-decoration: none;
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 25px;
+    width: fit-content;
+    display: block;
+    margin: 30px auto;
+}
+
+
+/* end portfolio */
+/* start video */
+.video-one {
+    position: relative;
+}
+
+.video-one::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0 0 0/30%);
+    left: 0;
+    top: 0;
+}
+
+.video-one video {
+    width: 100%;
+}
+
+.video-one .text {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    background-color: var(--tranperent);
+    text-align: center;
+    padding: 60px;
+    color: white;
+    transform: translateY(-50%);
+}
+
+
+.video-one .text h2 {
+    margin: 0 0 30px;
+    font-weight: normal;
+}
+
+.video-one .text p {
+    margin-bottom: 25px;
+}
+
+.video-one .text button {
+    background-color: black;
+    color: white;
+    PADDING: 8px 15px;
+}
+
+@media (max-width:768px) {
+    .video-one .text {
+        padding: 15px;
+
+    }
+
+    .video-one .text h2 {
+        margin: 0 0 3px;
+        font-size: smaller;
+
+    }
+
+    .video-one .text p {
+        margin-bottom: 2px;
+        font-size: smaller;
+    }
+
+    .video-one .text button {
+        background-color: black;
+        color: white;
+        PADDING: 3px;
+        font-size: smaller;
+    }
+}
+
+.about {
+    padding-top: var(--headering-padding);
+    overflow: hidden;
+    text-align: center;
+}
+
+.about img {
+    position: relative;
+    bottom: -120px;
+    margin-top: -120px;
+    max-width: 100%;
+}
+
+/* end video */
